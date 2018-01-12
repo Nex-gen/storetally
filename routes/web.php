@@ -28,6 +28,12 @@ Route::get('/user/shop', function () {
 Route::get('/user/shop/create', function () {
     return view('user.shop.create');
 });
-Route::get('/user/shop/edit', function () {
-    return view('user.shop.edit');
+
+// User Routes
+Route::group(['namespace' => 'User'], function(){
+	Route::resource('user/shop/items', 'ProductController');
+	Route::resource('user/shop/categories', 'CategoryController');
+	Route::resource('user/shop/brands', 'BrandController');
+	Route::resource('user/shop/suppliers', 'SupplierController');
+	Route::resource('user/shop/invoices', 'InvoiceController');
 });

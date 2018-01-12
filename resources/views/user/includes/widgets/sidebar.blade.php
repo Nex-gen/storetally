@@ -12,20 +12,20 @@
 						<div class="nano-content">
 							<nav id="menu" class="nav-main" role="navigation">
 								<ul class="nav nav-main">
-									<li class="nav-active">
+									<li class="">
 										<a href="index.html">
 											<i class="fa fa-dashboard" aria-hidden="true"></i>
 											<span>Dashboard</span>
 										</a>
 									</li>
-									<li>
+									{{-- <li>
 										<a href="mailbox-folder.html">
 											<span class="pull-right label label-primary">182</span>
 											<i class="fa fa-envelope" aria-hidden="true"></i>
 											<span>Mailbox</span>
 										</a>
-									</li>
-									<li class="nav-parent">
+									</li> --}}
+									<li class="nav-parent nav-active">
 										<a>
 											<i class="fa fa-copy" aria-hidden="true"></i>
 											<span>Manage Shop</span>
@@ -37,13 +37,23 @@
 												</a>
 											</li>
 											<li>
-												<a href="#">
-													Products/Items
+												<a href="{{route('items.index')}}">
+													Shop items
+												</a>
+											</li>
+											<li>
+												<a href="{{route('categories.index')}}">
+													Item categories/brands
+												</a>
+											</li>
+											<li>
+												<a href="{{route('suppliers.index')}}">
+													Item suppliers
 												</a>
 											</li>
 											<li>
 												<a href="#">
-													Product Categories/Brands
+													Customers
 												</a>
 											</li>
 										</ul>
@@ -51,7 +61,7 @@
 									<li class="nav-parent">
 										<a>
 											<i class="fa fa-tasks" aria-hidden="true"></i>
-											<span>Transactions History</span>
+											<span>Transactions</span>
 										</a>
 										<ul class="nav nav-children">
 											<li>
@@ -68,7 +78,7 @@
 									</li>
 									<li>
 										<a href="#">
-											<i class="fa fa-user-group" aria-hidden="true"></i>
+											<i class="fa fa-users" aria-hidden="true"></i>
 											<span>Manage Employees</span>
 										</a>
 									</li>
